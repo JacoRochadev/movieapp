@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:dio/src/dio.dart';
 import 'package:movieapp/service/dio_service.dart';
 
 class DioServiceImp implements DioService {
@@ -8,11 +7,9 @@ class DioServiceImp implements DioService {
     return Dio(
       BaseOptions(
         baseUrl: 'https://api.themoviedb.org/3/',
-        connectTimeout: 5000,
-        receiveTimeout: 3000,
         headers: {
           'Content-Type': 'application/json; charset=utf-8',
-          'authorization': 'Bearer 5b0a0c5f28b81009ed6225b6a567b497'
+          'authorization': 'Bearer 5b0a0c5f28b81009ed6225b6a567b497',
         },
       ),
     );
